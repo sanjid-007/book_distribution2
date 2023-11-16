@@ -237,6 +237,53 @@ app.post('/insertClass5StudentInfo', (req, res) => {
   
 
 
+
+// overall student info
+// // Endpoint to insert student information
+// app.post('/insertStudentInfo', (req, res) => {
+//   const {
+//     roll_number,
+//     student_first_name,
+//     student_last_name,
+//     class_name,
+//     father_name,
+//     mother_name,
+//     address,
+//     phone_number,
+//     birthdate,
+//   } = req.body;
+
+//   const sql = `
+//     INSERT INTO student_info
+//     (roll_number, student_first_name, student_last_name, class_name, father_name, mother_name, address, phone_number, birthdate)
+//     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+//   `;
+
+//   const values = [
+//     roll_number,
+//     student_first_name,
+//     student_last_name,
+//     class_name,
+//     father_name,
+//     mother_name,
+//     address,
+//     phone_number,
+//     birthdate,
+//   ];
+
+//   db.query(sql, values, (err, result) => {
+//     if (err) {
+//       console.error('Error inserting student information: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       console.log('Student information inserted successfully');
+//       res.status(200).send('Student information inserted successfully');
+//     }
+//   });
+// });
+
+
+
 // Endpoint to get class 1 student information by roll number
 app.get('/getClass1StudentInfo/:roll_number', (req, res) => {
     const roll_number = req.params.roll_number;
@@ -256,9 +303,7 @@ app.get('/getClass1StudentInfo/:roll_number', (req, res) => {
       }
     });
   });
-  
-
-  
+   
 // Endpoint to get class 2 student information by roll number
 app.get('/getClass2StudentInfo/:roll_number', (req, res) => {
     const roll_number = req.params.roll_number;
@@ -341,7 +386,95 @@ app.get('/getClass5StudentInfo/:roll_number', (req, res) => {
       }
     });
   });
+
+
+
+// from student info
+// // Endpoint to get Class 1 student information by roll number
+// app.get('/getClass1StudentInfo/:roll_number', (req, res) => {
+//   const roll_number = req.params.roll_number;
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 1" AND roll_number = ?';
+
+//   db.query(sql, [roll_number], (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving Class 1 student information: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Repeat the pattern for classes 2, 3, 4, and 5
+
+// // Endpoint to get Class 2 student information by roll number
+// app.get('/getClass2StudentInfo/:roll_number', (req, res) => {
+//   const roll_number = req.params.roll_number;
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 2" AND roll_number = ?';
+
+//   db.query(sql, [roll_number], (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving Class 2 student information: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get Class 3 student information by roll number
+// app.get('/getClass3StudentInfo/:roll_number', (req, res) => {
+//   const roll_number = req.params.roll_number;
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 3" AND roll_number = ?';
+
+//   db.query(sql, [roll_number], (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving Class 3 student information: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get Class 4 student information by roll number
+// app.get('/getClass4StudentInfo/:roll_number', (req, res) => {
+//   const roll_number = req.params.roll_number;
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 4" AND roll_number = ?';
+
+//   db.query(sql, [roll_number], (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving Class 4 student information: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get Class 5 student information by roll number
+// app.get('/getClass5StudentInfo/:roll_number', (req, res) => {
+//   const roll_number = req.params.roll_number;
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 5" AND roll_number = ?';
+
+//   db.query(sql, [roll_number], (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving Class 5 student information: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+
+
+
+
+
   
+
+
 
 
 // Endpoint to get all student information for class 1
@@ -374,7 +507,7 @@ app.get('/getClass1StudentInfo', (req, res) => {
     });
   });
   
-  // Repeat the pattern for classes 3, 4, and 5
+
   
   // Endpoint to get all student information for class 3
   app.get('/getClass3StudentInfo', (req, res) => {
@@ -424,6 +557,87 @@ app.get('/getClass1StudentInfo', (req, res) => {
 
 
 
+
+
+// from student info
+// // Endpoint to get all students of Class 1
+// app.get('/getAllStudentsClass1', (req, res) => {
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 1"';
+
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving students for Class 1: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get all students of Class 2
+// app.get('/getAllStudentsClass2', (req, res) => {
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 2"';
+
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving students for Class 2: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get all students of Class 3
+// app.get('/getAllStudentsClass3', (req, res) => {
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 3"';
+
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving students for Class 3: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get all students of Class 4
+// app.get('/getAllStudentsClass4', (req, res) => {
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 4"';
+
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving students for Class 4: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+// // Endpoint to get all students of Class 5
+// app.get('/getAllStudentsClass5', (req, res) => {
+//   const sql = 'SELECT * FROM student_info WHERE class_name = "Class 5"';
+
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       console.error('Error retrieving students for Class 5: ', err);
+//       res.status(500).send('Internal Server Error');
+//     } else {
+//       res.status(200).json(result);
+//     }
+//   });
+// });
+
+
+
+
+
+
+
+
+//assigning...
 
 
 
@@ -608,6 +822,8 @@ app.get('/getAssignedBookClass1Student/:roll_number', (req, res) => {
     });
   });
   
+
+
 
 
  

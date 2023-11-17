@@ -34,6 +34,7 @@ db.connect((err) => {
 });
 
 
+
 app.get('/', (req, res) => {
   res.render('index', { title: 'Node.js App with HBS' });
 });

@@ -61,37 +61,77 @@ app.get('/bookfrom-ntcb-entry', (req, res) => {
 
 
 // rifat
-app.get('/showentrypage', (req, res) => {
+app.get('/http://127.0.0.1:5500/main-menu.html', (req, res) => {
   res.render('main-menu/main-menu', { title: 'Node.js App with HBS' });
 });
 
 
 // api to load class1 to class 5 student information pages
-app.get('/page1', (req, res) => {
+app.get('/http://127.0.0.1:5500/page1.html', (req, res) => {
   res.render('pages/page1', { title: 'Node.js App with HBS' });
 });
-app.get('/page2', (req, res) => {
+app.get('/http://127.0.0.1:5500/page2.html', (req, res) => {
   res.render('pages/page2', { title: 'Node.js App with HBS' });
 });
-app.get('/page3', (req, res) => {
+app.get('/http://127.0.0.1:5500/page3.html', (req, res) => {
   res.render('pages/page3', { title: 'Node.js App with HBS' });
 });
 
-app.get('/page4', (req, res) => {
+app.get('/http://127.0.0.1:5500/page4.html', (req, res) => {
   res.render('pages/page4', { title: 'Node.js App with HBS' });
 });
 
-app.get('/page5', (req, res) => {
+app.get('/http://127.0.0.1:5500/page5.html', (req, res) => {
   res.render('pages/page5', { title: 'Node.js App with HBS' });
 });
 
 
 
 // api to load login page
-app.get('/login', (req, res) => {
+app.get('/http://127.0.0.1:5500/login.html', (req, res) => {
   res.render('login/login', { title: 'Node.js App with HBS' });
 });
 
+
+//api to load distributed books of each class
+//clas1
+app.get('/http://127.0.0.1:5500/dist-page1.html', (req, res) => {
+  res.render('dist-page/dist-page1', { title: 'Node.js App with HBS' });
+});
+//class2
+app.get('/http://127.0.0.1:5500/dist-page2.html', (req, res) => {
+  res.render('dist-page/dist-page2', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/dist-page3.html', (req, res) => {
+  res.render('dist-page/dist-page3', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/dist-page4.html', (req, res) => {
+  res.render('dist-page/dist-page4', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/dist-page5.html', (req, res) => {
+  res.render('dist-page/dist-page5', { title: 'Node.js App with HBS' });
+});
+
+
+
+// api to load see and edit distributed books of each class
+// view student api which was made below
+//clas1
+app.get('/http://127.0.0.1:5500/std-page1.html', (req, res) => {
+  res.render('std-page/std-page1', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/std-page2.html', (req, res) => {
+  res.render('std-page/std-page2', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/std-page3.html', (req, res) => {
+  res.render('std-page/std-page4', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/std-page4.html', (req, res) => {
+  res.render('std-page/std-page4', { title: 'Node.js App with HBS' });
+});
+app.get('/http://127.0.0.1:5500/std-page5.html', (req, res) => {
+  res.render('std-page/std-page5', { title: 'Node.js App with HBS' });
+});
 
 
 
